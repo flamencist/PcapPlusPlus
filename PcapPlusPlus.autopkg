@@ -1,0 +1,90 @@
+﻿configurations 
+{
+    // This node contains custom pivot information.
+    Toolset 
+    {
+        key : "PlatformToolset"; // this is CoApp pre-defined key
+        choices: { v142, v141, v140 };
+    };
+}
+nuget {
+   nuspec {
+      id = PcapPlusPlus;
+      version : 19.12.0.2;
+      title: PcapPlusPlus;
+      authors: {PcapPlusPlus};
+      owners: {PcapPlusPlus};
+      licenseUrl: "https://github.com/seladb/PcapPlusPlus/blob/master/LICENSE";
+      iconUrl: "https://camo.githubusercontent.com/1b3a80978dde7fc9c72c4057defd4b034ff54e58/68747470733a2f2f70636170706c7573706c75732e6769746875622e696f2f7265736f75726365732f6c6f676f5f636f6c6f722e706e67";
+      requireLicenseAcceptance:true;
+      summary:"release nuget";
+      description: @"PcapPlusPlus is a multiplatform C++ library for capturing, parsing and crafting of network packets. It is designed to be efficient, powerful and easy to use. It provides C++ wrappers for the most popular packet processing engines such as libpcap, WinPcap, DPDK and PF_RING.";
+      projectUrl: "https://pcapplusplus.github.io/";
+      copyright: "";
+      tags: {  wincap, ncap, pcap, native };
+   };
+ 
+   files {
+      include: { .\Common++\header\*.h, .\Pcap++\header\*.h, .\Packet++\header\*.h };
+       
+	  // v140 - VS2015
+      [x86,v140,release] {
+         //lib:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+         bin:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+      };
+      [x86,v140,debug] {
+         //lib:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+         symbols: { .\Common++\Lib\Common++.pdb, .\Pcap++\Lib\Pcap++.pdb, .\Packet++\Lib\Packet++.pdb };
+         bin:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+      };
+      [x64,v140,release] {
+         //lib:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };         
+         bin:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+      };
+      [x64,v140,debug] {
+         //lib:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+         symbols: { .\Common++\Lib\Common++.pdb, .\Pcap++\Lib\Pcap++.pdb, .\Packet++\Lib\Packet++.pdb };
+         bin:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+      };   
+	   
+	  // v141 - VS2017
+      [x86,v141,release] {
+         //lib:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+         bin:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+      };
+      [x86,v141,debug] {
+         //lib:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+         symbols: { .\Common++\Lib\Common++.pdb, .\Pcap++\Lib\Pcap++.pdb, .\Packet++\Lib\Packet++.pdb };
+         bin:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+      };
+      [x64,v141,release] {
+         //lib:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };         
+         bin:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+      };
+      [x64,v141,debug] {
+         //lib:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+         symbols: { .\Common++\Lib\Common++.pdb, .\Pcap++\Lib\Pcap++.pdb, .\Packet++\Lib\Packet++.pdb };
+         bin:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+      };     
+	   
+      // v142 - VS2019
+      [x86,v142,release] {
+         //lib:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+         bin:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+      };
+      [x86,v142,debug] {
+         //lib:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+         symbols: { .\Common++\Lib\Common++.pdb, .\Pcap++\Lib\Pcap++.pdb, .\Packet++\Lib\Packet++.pdb };
+         bin:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+      };
+      [x64,v142,release] {
+         //lib:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };         
+         bin:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+      };
+      [x64,v142,debug] {
+         //lib:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+         symbols: { .\Common++\Lib\Common++.pdb, .\Pcap++\Lib\Pcap++.pdb, .\Packet++\Lib\Packet++.pdb };
+         bin:     { .\Common++\Lib\Common++.lib, .\Pcap++\Lib\Pcap++.lib, .\Packet++\Lib\Packet++.lib };
+      };      
+   };
+}
